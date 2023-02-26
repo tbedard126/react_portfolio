@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Nav } from "react-bootstrap";
 // const NavTabs = ({ currentPage, handlePageChange }) => {
 //   return (
 //     <ul className="nav nav-tabs text-center">
@@ -40,27 +40,50 @@ import React from "react";
 //   );
 // };
 
+// const NavTabs = ({ currentPage, handlePageChange }) => {
+//   const links = [
+//     { name: "Home", href: "#home" },
+//     { name: "Projects", href: "#projects" },
+//     { name: "Contact", href: "#contact" },
+//   ];
+
+//   return (
+//     <ul className="nav nav-tabs text-center">
+//       {links.map((link) => (
+//         <li className="nav-item text-center" key={link.name}>
+//           <a
+//             href={link.href}
+//             onClick={() => handlePageChange(link.name)}
+//             className={`nav-link${currentPage === link.name ? " active" : ""}`}
+//           >
+//             {link.name}
+//           </a>
+//         </li>
+//       ))}
+//     </ul>
+//   );
+// };
+// export default NavTabs;
+
 const NavTabs = ({ currentPage, handlePageChange }) => {
   const links = [
     { name: "Home", href: "#home" },
     { name: "Projects", href: "#projects" },
     { name: "Contact", href: "#contact" },
+    { name: "Resume", href: "#resume" },
   ];
 
   return (
-    <ul className="nav nav-tabs text-center">
+    <Nav variant="tabs" activeKey={currentPage} onSelect={handlePageChange}>
       {links.map((link) => (
-        <li className="nav-item text-center" key={link.name}>
-          <a
-            href={link.href}
-            onClick={() => handlePageChange(link.name)}
-            className={`nav-link${currentPage === link.name ? " active" : ""}`}
-          >
+        <Nav.Item key={link.name}>
+          <Nav.Link eventKey={link.name} href={link.href}>
             {link.name}
-          </a>
-        </li>
+          </Nav.Link>
+        </Nav.Item>
       ))}
-    </ul>
+    </Nav>
   );
 };
+
 export default NavTabs;

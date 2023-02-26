@@ -1,10 +1,15 @@
 import React from "react";
+import { Container, Navbar } from "react-bootstrap";
 
 const Header = () => {
   return (
-    <header className="text-center">
-      <h1>Welcome!</h1>
-    </header>
+    <Navbar className="justify-content-center header">
+      <Container>
+        <Navbar.Brand>
+          <h1>Welcome!</h1>
+        </Navbar.Brand>
+      </Container>
+    </Navbar>
   );
 };
 

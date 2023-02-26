@@ -34,6 +34,13 @@ const images = [
     live: "https://aramic11.github.io/project_top_tunes/",
     description: `A website for searching for the top 5 songs of your artist of choice`,
   },
+  {
+    image: "/assets/images/readme.png",
+    name: "ReadMe Generator",
+    repo: "https://github.com/tbedard126/make-a-readme",
+    live: null,
+    description: `Use this CLI program to generate a proffesional ReadMe.md file.`,
+  },
 ];
 
 export default images;

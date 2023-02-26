@@ -1,22 +1,62 @@
-import React from "react";
+import React, { useState } from "react";
+import { Container, Row, Col, Form, Button } from "react-bootstrap";
 
 export default function Contact() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    // Send the form data to your email address using a backend API or service
+    console.log("Form submitted:", { name, email, message });
+    setName("");
+    setEmail("");
+    setMessage("");
+  };
+
   return (
-    <div className="text-center">
-      <h1 className="text-center">Contact Page</h1>
-      <p className="margin">
-        Integer cursus bibendum sem non pretium. Vestibulum in aliquet sem, quis
-        molestie urna. Aliquam semper ultrices varius. Aliquam faucibus sit amet
-        magna a ultrices. Aenean pellentesque placerat lacus imperdiet
-        efficitur. In felis nisl, luctus non ante euismod, tincidunt bibendum
-        mi. In a molestie nisl, eu sodales diam. Nam tincidunt lacus quis magna
-        posuere, eget tristique dui dapibus. Maecenas fermentum elementum
-        faucibus. Quisque nec metus vestibulum, egestas massa eu, sollicitudin
-        ipsum. Nulla facilisi. Sed ut erat ligula. Nam tincidunt nunc in nibh
-        dictum ullamcorper. Class aptent taciti sociosqu ad litora torquent per
-        conubia nostra, per inceptos himenaeos. Etiam ornare rutrum felis at
-        rhoncus. Etiam vel condimentum magna, quis tempor nulla.
-      </p>
-    </div>
+    <Container>
+      <Row className="justify-content-center">
+        <Col md={6}>
+          <div className="card border-primary p-3">
+            <h1 className="text-center mb-4 contactBody">Contact Page</h1>
+            <Form onSubmit={handleSubmit}>
+              <Form.Group>
+                <Form.Control
+                  type="text"
+                  placeholder="Enter your name"
+                  value={name}
+                  onChange={(event) => setName(event.target.value)}
+                  required
+                />
+              </Form.Group>
+              <Form.Group>
+                <Form.Control
+                  type="email"
+                  placeholder="Enter your email"
+                  value={email}
+                  onChange={(event) => setEmail(event.target.value)}
+                  required
+                />
+              </Form.Group>
+              <Form.Group>
+                <Form.Control
+                  as="textarea"
+                  rows={5}
+                  placeholder="Enter your message"
+                  value={message}
+                  onChange={(event) => setMessage(event.target.value)}
+                  required
+                />
+              </Form.Group>
+              <Button type="submit" className="btn btn-primary">
+                Submit
+              </Button>
+            </Form>
+          </div>
+        </Col>
+      </Row>
+    </Container>
   );
 }
