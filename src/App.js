@@ -2,8 +2,10 @@
 import Header from "./components/Header";
 // import Nav from "./components/Nav";
 // import Home from "./components/Home";
-// import Footer from "./components/Footer";
+import Footer from "./components/Footer";
 import Container from "./components/Container";
+// import Projects from "./components/Projects";
+
 function App() {
   return (
     <div>
@@ -11,7 +13,10 @@ function App() {
       <Nav />
       <Home /> */}
       <Header />
+
       <Container />
+
+      <Footer />
     </div>
   );
 }

@@ -2,9 +2,9 @@ import React from "react";
 
 export default function Contact() {
   return (
-    <div>
-      <h1>Contact Page</h1>
-      <p>
+    <div className="text-center">
+      <h1 className="text-center">Contact Page</h1>
+      <p className="margin">
         Integer cursus bibendum sem non pretium. Vestibulum in aliquet sem, quis
         molestie urna. Aliquam semper ultrices varius. Aliquam faucibus sit amet
         magna a ultrices. Aenean pellentesque placerat lacus imperdiet
