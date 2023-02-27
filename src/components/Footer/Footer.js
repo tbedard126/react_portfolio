@@ -3,27 +3,6 @@ import "@fortawesome/fontawesome-free/css/all.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
-// const Footer = () => {
-//   return (
-//     <footer>
-//       <div className="fixed-bottom">
-//         <p className="text-center author zoom">
-//           Tyler Bedard
-//           <span className="footer-links">
-//             <a href="mailto:tylerbedard126@gmail.com">
-//               <FontAwesomeIcon icon={faEnvelope} />
-//             </a>
-//             <a href="https://github.com/tbedard126">
-//               <i className="fab fa-github"></i>
-//             </a>
-//           </span>
-//         </p>
-//       </div>
-//     </footer>
-//   );
-// };
-
-// export default Footer;
 // import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

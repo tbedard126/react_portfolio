@@ -22,69 +22,6 @@ const ImageCard = ({ image, name, repo, live, description }) => {
   );
 };
 
-// const Projects = () => {
-//   return (
-//     <div className="d-flex justify-content-center mt-5">
-//       <div className="row ">
-//         {images.map((image, index) => (
-//           <div key={index} className="col-md-5 mb-3 image-card">
-//             <ImageCard key={image.name} {...image} />
-//           </div>
-//         ))}
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Projects;
-// const Projects = () => {
-//   return (
-//     <div>
-//       <div className="bg-dark text-white py-4">
-//         <Container>
-//           <Row className="justify-content-center">
-//             <h1 className="text-center">Projects</h1>
-//           </Row>
-//         </Container>
-//       </div>
-//       <div className="d-flex justify-content-center mt-1">
-//         <div className="row ">
-//           {images.map((image, index) => (
-//             <div key={index} className="col-md-5 mb-3 image-card">
-//               <ImageCard key={image.name} {...image} />
-//             </div>
-//           ))}
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Projects;
-// const Projects = () => {
-//   return (
-//     <div className="main">
-//       <div className="bg-dark text-white py-4">
-//         <Container>
-//           <Row className="justify-content-center">
-//             <h1 className="text-center">Projects</h1>
-//           </Row>
-//         </Container>
-//       </div>
-//       <div className="d-flex justify-content-center mt-1">
-//         <div className="row mx-auto">
-//           {images.map((image, index) => (
-//             <div key={index} className="col-md-5 m-3">
-//               <ImageCard key={image.name} {...image} />
-//             </div>
-//           ))}
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Projects;
 const Projects = () => {
   return (
     <div>
