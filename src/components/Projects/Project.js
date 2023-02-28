@@ -24,7 +24,7 @@ const ImageCard = ({ image, name, repo, live, description }) => {
 
 const Projects = () => {
   return (
-    <div>
+    <div className="cards">
       <div className="bg-dark text-white py-4">
         <Container>
           <Row className="justify-content-center">

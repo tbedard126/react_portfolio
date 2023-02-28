@@ -43,7 +43,7 @@ const Resume = () => {
       </Col>
       <div>
         <h1 className="text-center">Technologies I Know</h1>
-        <Container className="resumeContainer">
+        <Container className="resumeContainer" style={{ maxWidth: "800px" }}>
           <Row>
             {technologies.map((tech, index) => (
               <Col key={index} xs={6} md={3}>
