@@ -1,18 +1,31 @@
 import React, { useState } from "react";
-import { Container, Row, Col, Form, Button } from "react-bootstrap";
+import { Container, Row, Col, Form, Button, Alert } from "react-bootstrap";
 
 export default function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [showError, setShowError] = useState(false);
+  const [showSuccess, setShowSuccess] = useState(false);
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    if (!validateEmail(email)) {
+      setShowError(true);
+      return;
+    }
     // Send the form data to your email address using a backend API or service
     console.log("Form submitted:", { name, email, message });
     setName("");
     setEmail("");
     setMessage("");
+    setShowSuccess(true);
+  };
+
+  const validateEmail = (email) => {
+    // Email validation regular expression
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(String(email).toLowerCase());
   };
 
   return (
@@ -21,6 +34,24 @@ export default function Contact() {
         <Col md={6}>
           <div className="card border-primary p-3">
             <h1 className="text-center mb-4 contactBody">Contact Page</h1>
+            {showError && (
+              <Alert
+                variant="danger"
+                onClose={() => setShowError(false)}
+                dismissible
+              >
+                Please enter a valid email.
+              </Alert>
+            )}
+            {showSuccess && (
+              <Alert
+                variant="success"
+                onClose={() => setShowSuccess(false)}
+                dismissible
+              >
+                Your message has been sent.
+              </Alert>
+            )}
             <Form onSubmit={handleSubmit}>
               <Form.Group>
                 <Form.Control

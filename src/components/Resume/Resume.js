@@ -33,7 +33,11 @@ const Resume = () => {
   return (
     <Row className="mt-5 mb-3 ">
       <Col className="text-center">
-        <Button href="/path/to/resume.pdf" download variant="primary">
+        <Button
+          href="./react_portfolio/images/tyler_resume_2023.pdf"
+          download
+          variant="primary"
+        >
           Download Resume
         </Button>
       </Col>
