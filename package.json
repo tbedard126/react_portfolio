@@ -1,8 +1,8 @@
 {
-  "name": "react-portfolio",
+  "name": "react_portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://tbedard126.github.io/react-portfolio",
+  "homepage": "https://tbedard126.github.io/react_portfolio",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.3.0",
     "@fortawesome/free-brands-svg-icons": "^6.3.0",
