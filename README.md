@@ -15,7 +15,7 @@
 ## Description:
 
 This is a portfolio made for week 20 of my coding bootcamp!
-![](public\images\portfolio_pic_react.png)
+![](public/images/portfolio_pic_react.png)
 
 ## Installation:
 
